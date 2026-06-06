@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>AI-Labs · 수학 탐구 놀이터</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      min-height: 100vh;
+      padding: 48px 20px 60px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .page-header h1 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .page-header h1 .emoji { font-size: 1.9rem; line-height: 1; }
+    .page-header h1 .brand {
+      background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-header .tagline {
+      font-size: 1rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* ── Padlet-style board ── */
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .column {
+      background: #f1f5f9;
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-height: 220px;
+    }
+    /* 컬럼별 톤 */
+    .column.col-inquiry { background: #fef9e7; border: 1px solid #f2e2a8; }
+    .column.col-novel { background: #eff6ff; border: 1px solid #bfdbfe; }
+    .column.col-future { background: #f8fafc; border: 1px dashed #cbd5e1; }
+
+    .column-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 4px 4px 8px;
+    }
+    .column-header .col-emoji {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+    .column-header h2 {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: #334155;
+    }
+    .col-inquiry .column-header h2 { color: #78350f; }
+    .col-novel .column-header h2 { color: #1e40af; }
+    .col-future .column-header h2 { color: #94a3b8; }
+
+    /* ── Card ── */
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
+      text-decoration: none;
+      color: #1e293b;
+      display: block;
+      transition: transform 0.15s, box-shadow 0.15s;
+      border: 1.5px solid transparent;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1);
+    }
+    .col-inquiry .card:hover { border-color: #ca8a04; }
+    .col-novel .card:hover { border-color: #2563eb; }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+    }
+    .col-inquiry .card-tag { background: #fef3c7; color: #78350f; }
+    .col-novel .card-tag { background: #dbeafe; color: #1e40af; }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .card-sub {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    .card-foot {
+      margin-top: 12px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+    .card:hover .card-foot { color: #2563eb; }
+    .col-inquiry .card:hover .card-foot { color: #ca8a04; }
+
+    /* Empty placeholder card */
+    .card-empty {
+      background: transparent;
+      border: 2px dashed #cbd5e1;
+      border-radius: 14px;
+      padding: 28px 18px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .card-empty .ce-icon {
+      font-size: 1.4rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      margin-top: 56px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    /* ── Tablet (2 columns) ── */
+    @media (max-width: 980px) {
+      .board { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ── Mobile (1 column) ── */
+    @media (max-width: 620px) {
+      body { padding: 36px 14px 50px; }
+      .page-header { margin-bottom: 32px; }
+      .page-header h1 { font-size: 1.9rem; }
+      .page-header .tagline { font-size: 0.92rem; }
+      .board { grid-template-columns: 1fr; gap: 14px; }
+      .column { padding: 14px; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="page-header">
+      <h1><span class="emoji">🧩🎲✨</span><span class="brand">AI-Labs</span></h1>
+      <p class="tagline">AI와 함께 하는 수학 탐구 놀이터</p>
+    </div>
+
+    <!-- 카드는 games.json을 읽어 자동 생성됩니다 (아래 script) -->
+    <div class="board" id="board"></div>
+
+    <footer>&copy; 2026 서울사대부중 2학년 수학B 허철호 선생님 · All rights reserved</footer>
+
+  </div>
+
+  <script>
+    // ─────────────────────────────────────────────────────────
+    //  AI-Labs 허브 — games.json을 읽어 카드를 자동 생성한다.
+    //  새 게임 추가 = games.json에 항목 1개 추가. 이 파일은 손대지 않음.
+    // ─────────────────────────────────────────────────────────
+    const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+    function gameCard(g) {
+      return `<a class="card" href="${esc(g.url)}" target="_blank" rel="noopener">
+        <span class="card-tag">${esc(g.tag)}</span>
+        <div class="card-title">${esc(g.title)}</div>
+        <div class="card-sub">${esc(g.desc)}</div>
+        <div class="card-foot">${esc(g.cta || '열기 →')}</div>
+      </a>`;
+    }
+
+    function emptyCard(text, placeholder) {
+      const icon = placeholder ? '＋' : '✨';
+      return `<div class="card-empty"><span class="ce-icon">${icon}</span>${esc(text)}</div>`;
+    }
+
+    function render(data) {
+      const board = document.getElementById('board');
+      board.innerHTML = data.columns.map(col => {
+        const games = data.games.filter(g => g.column === col.id);
+        const cards = games.map(gameCard).join('');
+        // 게임이 있어도 placeholder 컬럼이 아니면 "곧 추가" 안내 1개를 덧붙임
+        const empty = col.placeholder
+          ? emptyCard(col.emptyText, true)
+          : emptyCard(col.emptyText, false);
+        return `<div class="column col-${esc(col.id)}">
+          <div class="column-header">
+            <span class="col-emoji">${esc(col.emoji)}</span>
+            <h2>${esc(col.title)}</h2>
+          </div>
+          ${cards}${empty}
+        </div>`;
+      }).join('');
+    }
+
+    fetch('games.json')
+      .then(r => r.json())
+      .then(render)
+      .catch(err => {
+        document.getElementById('board').innerHTML =
+          '<p style="color:#94a3b8">게임 목록을 불러오지 못했습니다.</p>';
+        console.error(err);
+      });
+  </script>
+
+</body>
+</html>

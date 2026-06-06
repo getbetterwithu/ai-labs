@@ -1,0 +1,43 @@
+{
+  "columns": [
+    {
+      "id": "inquiry",
+      "emoji": "🧩",
+      "title": "탐구 · 증명 활동",
+      "emptyText": "새 탐구가 곧 추가됩니다"
+    },
+    {
+      "id": "novel",
+      "emoji": "📖",
+      "title": "비주얼노벨 게임",
+      "emptyText": "새 비주얼노벨이 곧 추가됩니다"
+    },
+    {
+      "id": "future",
+      "emoji": "🔮",
+      "title": "다음 형식",
+      "emptyText": "새로운 형식의 활동이 추가될 자리",
+      "placeholder": true
+    }
+  ],
+  "games": [
+    {
+      "id": "domino-challenge",
+      "column": "inquiry",
+      "tag": "중·고 · 4단계 시리즈",
+      "title": "♟️ 훼손된 체스판 도미노",
+      "desc": "두 칸이 빠진 체스판을 도미노로 덮을 수 있을까? 패턴 탐구부터 증명까지.",
+      "url": "https://getbetterwithu.github.io/domino-challenge/",
+      "cta": "시리즈 보기 →"
+    },
+    {
+      "id": "polygon-quad",
+      "column": "novel",
+      "tag": "중2 · 4단원 사각형",
+      "title": "📐 폴리곤의 학당 — 사각형의 시험",
+      "desc": "피타고라스 학당 신입 폴리곤이 되어 평행사변형·마름모·직사각형·정사각형을 판별하며 분쟁을 해결한다.",
+      "url": "https://getbetterwithu.github.io/gamifications/unit4_tri_quad/games/stage1_quadrilaterals/hub.html",
+      "cta": "게임 시작 →"
+    }
+  ]
+}
