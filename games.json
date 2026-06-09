@@ -38,6 +38,15 @@
       "desc": "피타고라스 학당 신입 폴리곤이 되어 평행사변형·마름모·직사각형·정사각형을 판별하며 분쟁을 해결한다.",
       "url": "https://getbetterwithu.github.io/gamifications/unit4_tri_quad/games/stage1_quadrilaterals/hub.html",
       "cta": "게임 시작 →"
+    },
+    {
+      "id": "nether-math-defense",
+      "column": "future",
+      "tag": "초2 · 소마셈 B2 연산",
+      "title": "🔥 네더 수학 디펜스",
+      "desc": "마인크래프트 네더 세계에서 몰려오는 몹들의 수학 문제를 풀어 격파하는 스피드 연산 게임",
+      "url": "https://getbetterwithu.github.io/kids/nether_speedquiz/index.html",
+      "cta": "게임 시작 →"
     }
   ]
 }
