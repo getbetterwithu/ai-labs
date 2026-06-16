@@ -40,6 +40,15 @@
       "cta": "게임 시작 →"
     },
     {
+      "id": "similar-golden",
+      "column": "novel",
+      "tag": "중2 · 5단원 닮음 · 개발 중",
+      "title": "📐 시밀러와 황금 비례판 — 도형의 닮음",
+      "desc": "사각형의 시험을 통과한 폴리곤이 '시밀러'가 되어, 도형의 닮음과 닮음비로 황금 비례판의 비밀을 풀어간다. (시나리오 리부트 중)",
+      "url": "https://getbetterwithu.github.io/gamifications/unit5_similarity/games/stage1_similarity/index.html",
+      "cta": "미리 보기 →"
+    },
+    {
       "id": "nether-math-defense",
       "column": "future",
       "tag": "초2 · 소마셈 B2 연산",
