@@ -11,10 +11,14 @@
 - 카드는 `games.json`에서 **자동 생성**. `index.html`에 카드를 직접 쓰지 않는다.
 - 새 게임 추가 = `games.json`에 항목 1개. 그게 전부.
 
+## 새 게임 레포 생성 프로토콜
+새 게임 레포를 만들 때:
+- `game-CLAUDE-template.md` 내용을 그 레포의 CLAUDE.md에 넣는다 (사용자에게 고지 후).
+
 ## 게임 추가/갱신 프로토콜
-사용자가 "게임N을 허브에 반영해줘" 하면:
+사용자가 "게임N을 허브에 반영해줘" 하거나, 게임 레포를 push 할 때:
 1. 해당 게임 레포를 최신화(pull/clone) 후 그 CLAUDE.md의 "허브 카드 정보" 블록을 읽는다.
-2. `games.json`의 `games` 배열에 항목 1개 추가/수정 (column: inquiry|novel|future).
+2. `games.json` 등록·최신 여부를 확인한다. 누락 시 `games` 배열에 항목 1개 추가/수정 제안 (column: inquiry|novel|future).
 3. 커밋·push (getbetterwithu 계정).
 
 ## 파일
