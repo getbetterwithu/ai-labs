@@ -47,6 +47,15 @@
       "desc": "사각형의 시험을 통과한 폴리곤이 '시밀러'가 되어, 도형의 닮음과 닮음비로 황금 비례판의 비밀을 풀어간다. (시나리오 리부트 중)",
       "url": "https://getbetterwithu.github.io/gamifications/unit5_similarity/games/stage1_similarity/index.html",
       "cta": "미리 보기 →"
+    },
+    {
+      "id": "quad-centroid",
+      "column": "inquiry",
+      "tag": "중2 · 5단원 무게중심 · 3단계",
+      "title": "⚖️ 받쳐서 찾는 사각형의 무게중심",
+      "desc": "사각형은 어디를 받쳐야 기울지 않을까? 대각선으로 나누고 넓이를 바꿔 보며 무게중심의 위치를 스스로 찾아낸다.",
+      "url": "https://getbetterwithu.github.io/quad-centroid/",
+      "cta": "활동 시작 →"
     }
   ]
 }
