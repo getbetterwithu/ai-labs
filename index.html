@@ -52,7 +52,7 @@
     /* ── Padlet-style board ── */
     .board {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       align-items: start;
     }
@@ -69,6 +69,7 @@
     /* 컬럼별 톤 */
     .column.col-inquiry { background: #fef9e7; border: 1px solid #f2e2a8; }
     .column.col-novel { background: #eff6ff; border: 1px solid #bfdbfe; }
+    .column.col-scilab { background: #f0fdf4; border: 1px solid #bbf7d0; }
     .column.col-future { background: #f8fafc; border: 1px dashed #cbd5e1; }
 
     .column-header {
@@ -89,6 +90,7 @@
     }
     .col-inquiry .column-header h2 { color: #78350f; }
     .col-novel .column-header h2 { color: #1e40af; }
+    .col-scilab .column-header h2 { color: #166534; }
     .col-future .column-header h2 { color: #94a3b8; }
 
     /* ── Card ── */
@@ -109,6 +111,7 @@
     }
     .col-inquiry .card:hover { border-color: #ca8a04; }
     .col-novel .card:hover { border-color: #2563eb; }
+    .col-scilab .card:hover { border-color: #16a34a; }
 
     .card-tag {
       display: inline-block;
@@ -121,6 +124,7 @@
     }
     .col-inquiry .card-tag { background: #fef3c7; color: #78350f; }
     .col-novel .card-tag { background: #dbeafe; color: #1e40af; }
+    .col-scilab .card-tag { background: #dcfce7; color: #166534; }
 
     .card-title {
       font-size: 1.05rem;
@@ -168,6 +172,11 @@
       font-size: 0.85rem;
       color: #94a3b8;
       text-align: center;
+    }
+
+    /* ── Laptop (3 columns) ── */
+    @media (max-width: 1280px) {
+      .board { grid-template-columns: repeat(3, 1fr); }
     }
 
     /* ── Tablet (2 columns) ── */
