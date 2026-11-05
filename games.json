@@ -28,6 +28,15 @@
   ],
   "games": [
     {
+      "id": "monty-hall",
+      "column": "inquiry",
+      "tag": "중2 · 6단원 확률 · 시뮬레이션",
+      "title": "🚪 몬티홀 문제 확률 실험실",
+      "desc": "선택을 바꾸는 것이 과연 2배 유리할까? 짝꿍 상호 검증 및 초고속 전략 실험으로 대수의 법칙을 체험한다.",
+      "url": "https://getbetterwithu.github.io/monty-hall/",
+      "cta": "실험 시작 →"
+    },
+    {
       "id": "domino-challenge",
       "column": "inquiry",
       "tag": "중·고 · 4단계 시리즈",
