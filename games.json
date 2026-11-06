@@ -19,11 +19,10 @@
       "emptyText": "새 활동이 곧 추가됩니다"
     },
     {
-      "id": "future",
-      "emoji": "🔮",
-      "title": "다음 형식",
-      "emptyText": "새로운 형식의 활동이 추가될 자리",
-      "placeholder": true
+      "id": "probability",
+      "emoji": "🎲",
+      "title": "확률 · 실험실",
+      "emptyText": "새 확률 실험이 곧 추가됩니다"
     }
   ],
   "games": [
@@ -62,6 +61,15 @@
       "desc": "판을 받쳐 평형을 이루는 한 점을 찾는다. 대각선으로 나눈 두 삼각형의 넓이가 무게중심의 위치를 어떻게 정하는지, 시소의 원리로 알아낸다.",
       "url": "https://getbetterwithu.github.io/quad-centroid/",
       "cta": "활동 시작 →"
+    },
+    {
+      "id": "monty-hall",
+      "column": "probability",
+      "tag": "중2 · 6단원 확률 · 실시간 2인/교실",
+      "title": "🚪 몬티홀 쇼! 바꿀까? 말까?",
+      "desc": "자동차와 염소 세 개의 문! 도전자는 문 뒤를 모른 채 선택하고, 관전자는 실시간 투시로 지켜보는 라이브 확률 실험실.",
+      "url": "https://getbetterwithu.github.io/monty-hall/",
+      "cta": "쇼 무대 열기 →"
     }
   ]
 }
