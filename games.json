@@ -45,6 +45,15 @@
       "cta": "게임 시작 →"
     },
     {
+      "id": "polygon-dice",
+      "column": "novel",
+      "tag": "중2 · 6단원 확률 · 완결",
+      "title": "🎲 폴리곤과 운명의 주사위 — 경우의 수와 확률",
+      "desc": "피타고라스 학당 서고의 파피루스를 노리는 테론의 궤변을 논파하라! 3대 원석 수집과 12단계 시련을 돌파하는 수학 모험 비주얼노벨.",
+      "url": "https://getbetterwithu.github.io/unit6-probability/",
+      "cta": "모험 시작 →"
+    },
+    {
       "id": "quad-centroid",
       "column": "scilab",
       "tag": "중2 · 5단원 무게중심 · 평형 실험",
